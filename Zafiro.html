@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zafiro - Detalles</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body { 
+            margin: 0; 
+            font-family: "Inter", sans-serif;
+            background-color: #fffee3; 
+            color: rgb(42, 0, 104); 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
+            padding-bottom: 50px;
+        }
+
+        /* Botón hamburguesa */
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #0e075a;
+            z-index: 1000;
+        }
+
+        /* Menú lateral */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: #0e075a;
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .side-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .side-menu a:hover {
+            background: #1b1590;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        header { 
+            background: rgb(252, 255, 232); 
+            color: #0e075a; 
+            width: 100%; 
+            padding: 20px 0; 
+            font-size: 36px; 
+            letter-spacing: 8px; 
+            font-weight: 400;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            font-family: "Amiri Quran", serif;
+        }
+
+        .slogan { 
+            font-size: 16px; 
+            margin: 25px 0; 
+            font-style: italic; 
+            color: #0e075a;
+        }
+
+        .main-img-container {
+            width: 85%;
+            max-width: 500px;
+            border: 2px solid #d1d6f0;
+            padding: 10px;
+            background-color: rgba(148, 156, 226, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .main-img { 
+            width: 100%; 
+            height: auto; 
+            display: block;
+            object-fit: contain;
+        }
+
+        .description { 
+            width: 85%; 
+            max-width: 600px; 
+            font-size: 15px; 
+            line-height: 1.6; 
+            margin-bottom: 30px;
+            color: #190758;
+        }
+
+        .info-card {
+            background: rgba(9, 3, 66, 0.1);
+            border-radius: 8px;
+            width: 85%;
+            max-width: 600px;
+            padding: 20px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(14, 7, 68, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .info-card img {
+            width: 120px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .info-text h3 { 
+            margin-top: 0; 
+            color: #02006a; 
+            font-size: 18px; 
+        }
+
+        .info-text p { 
+            margin: 5px 0; 
+            font-size: 14px; 
+        }
+
+        .back-btn {
+            background: #0e106d;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background: rgb(13, 5, 75);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+    <div class="side-menu" id="menu">
+        <a href="index.html">Inicio</a>
+        <a href="Diamante.html">Diamante</a>
+        <a href="Opalo.html">Ópalo</a>
+        <a href="Zafiro.html">Zafiro</a>
+    </div>
+
+    <header>ZAFIRO</header>
+    
+    <p class="slogan">"Lealtad y nobleza en cada brillo"</p>
+
+    <div class="main-img-container">
+        <img src="Imagenes/Zafirofinal.jpg" alt="Anillo de Zafiro" class="main-img">
+    </div>
+
+    <div class="description">
+        El zafiro es una piedra preciosa asociada con la sabiduría, la nobleza y la fidelidad. Su tonalidad azul intenso lo convierte en una opción sofisticada y atemporal para anillas especiales.
+    </div>
+
+    <div class="info-card">
+        <div class="info-text">
+            <h3>DESCRIPCIÓN</h3>
+            <p>El zafiro es una piedra preciosa muy resistente y brillante, conocida por su color azul intenso, aunque puede encontrarse en otros colores.</p>
+        </div>
+        <img src="Imagenes/Zafirocaja 1.png" alt="Caja de Zafiro">
+    </div>
+
+    <div class="info-card">
+        <div class="info-text">
+            <h3>DATOS CURIOSOS</h3>
+            <p>• Existen zafiros en varios colores.</p>
+            <p>• Algunos zafiros pueden cambiar ligeramente de tono según la luz.</p>
+            <p>• El zafiro es una variedad del mineral llamado corindón.</p>
+            <p>• Solo el diamante es más duro que el zafiro en la naturaleza.</p>
+            <p>• Simboliza sabiduría y lealtad.</p>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-btn">Volver al Inicio</a>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

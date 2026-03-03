@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ópalo - Detalles</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<style>
+body { 
+    margin: 0; 
+    font-family: "Inter", sans-serif;
+    background-color: #2d4f4f; 
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* BOTÓN HAMBURGUESA LATERAL */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    z-index: 1000;
+}
+
+/* MENÚ LATERAL DESLIZANTE */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1f3a3a;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.side-menu a:hover {
+    background: #3f6b6b;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+/* Encabezado */
+header { 
+    background: white; 
+    color: #2d4f4f; 
+    width: 100%; 
+    padding: 20px 0; 
+    font-size: 36px; 
+    letter-spacing: 8px; 
+    font-weight: 400;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: "Amiri Quran", serif;
+}
+
+.slogan { 
+    font-size: 16px; 
+    margin: 25px 0; 
+    font-style: italic; 
+    color: #a4c3a2;
+}
+
+.main-img-container {
+    width: 85%;
+    max-width: 500px;
+    border: 2px solid #8e8d74;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.main-img { 
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.description { 
+    width: 85%; 
+    max-width: 600px; 
+    font-size: 15px; 
+    line-height: 1.6; 
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 85%;
+    max-width: 600px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.info-card img {
+    width: 120px;
+    border-radius: 4px;
+}
+
+.info-text h3 { 
+    margin-top: 0; 
+    color: #a4c3a2; 
+}
+
+.back-btn {
+    background: #a4c3a2;
+    color: #2d4f4f;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+
+<div class="side-menu" id="menu">
+    <a href="index.html">INICIO</a>
+    <a href="Diamante.html">DIAMANTE</a>
+    <a href="Zafiro.html">ZAFIRO</a>
+    <a href="Opalo.html">OPALO</a>
+</div>
+
+<header>ÓPALO</header>
+
+<p class="slogan">"La magia de la luz convertida en joya"</p>
+
+<div class="main-img-container">
+    <img src="Imagenes/Opalo 1.png" class="main-img">
+</div>
+
+<div class="description">
+El ópalo es una piedra preciosa conocida por su brillo iridiscente, ya que puede reflejar muchos colores al mismo tiempo cuando le da la luz.
+</div>
+
+<div class="info-card">
+    <div class="info-text">
+        <h3>DESCRIPCIÓN</h3>
+        <p>El ópalo es una piedra muy llamativa en los anillos por sus destellos de colores que cambian con la luz. Cada ópalo es único.</p>
+    </div>
+    <img src="Imagenes/Oalo2 1.png">
+</div>
+
+<div class="info-card">
+    <div class="info-text">
+        <h3>DATOS CURIOSOS</h3>
+        <p>• Australia produce el 95% de los ópalos del mundo.</p>
+        <p>• Contiene entre 5% y 20% de agua.</p>
+        <p>• Es la piedra tradicional del mes de octubre.</p>
+        <p>• Es más delicado que el diamante.</p>
+        <p>• Puede mostrar varios colores al mismo tiempo.</p>
+    </div>
+</div>
+
+<a href="index.html" class="back-btn">Volver al Inicio</a>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

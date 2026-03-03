@@ -1,0 +1,145 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rings - Inicio</title>
+
+    <style>
+        body { 
+            margin: 0; 
+            font-family: 'Times New Roman', serif; 
+            /* Asegúrate de que AnillosPortada.jpg esté dentro de la carpeta Imagenes */
+            background: #d3d3d3 url('Imagenes/AnillosPortada.jpg') no-repeat center center fixed; 
+            background-size: cover; 
+            height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 50px 0;
+        }
+
+        .title-box { 
+            background: white; 
+            color: #4b3d8e; 
+            padding: 15px 50px; 
+            font-size: 28px; 
+            letter-spacing: 5px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* BOTÓN HAMBURGUESA */
+        .hamburger {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-top: 20px;
+            z-index: 10;
+        }
+
+        .hamburger span {
+            height: 4px;
+            background: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        /* Animación */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px,6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px,-7px);
+        }
+
+        /* MENÚ OCULTO */
+        .menu { 
+            display: none; 
+            flex-direction: column; 
+            gap: 20px; 
+            margin-top: 30px;
+        }
+
+        .btn { 
+            background: #d8d2c2; 
+            color: #444; 
+            text-decoration: none; 
+            padding: 15px 0; 
+            width: 220px; 
+            text-align: center; 
+            font-size: 16px; 
+            text-transform: uppercase; 
+            letter-spacing: 3px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #c5beac;
+        }
+
+        .social-icons { 
+            display: flex; 
+            gap: 20px; 
+        }
+
+        .social-icons img { 
+            width: 50px; 
+            height: 50px; 
+            object-fit: contain; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="title-box">RINGS</div>
+
+    <div class="hamburger" onclick="toggleMenu(this)">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="menu" id="menu">
+        <a href="Diamante.html" class="btn">DIAMANTE</a>
+        <a href="Zafiro.html" class="btn">ZAFIRO</a>
+        <a href="Opalo.html" class="btn">OPALO</a>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="Imagenes/Facebook.jpg" alt="FB">
+        </a>
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="Imagenes/Insta.jpg" alt="IG">
+        </a>
+        <a href="https://wa.me/521234567890" target="_blank">
+            <img src="Imagenes/Wats.jpg" alt="WA">
+        </a>
+    </div>
+
+<script>
+function toggleMenu(element){
+    element.classList.toggle("active");
+    let menu = document.getElementById("menu");
+    
+    // Mejoramos la lógica de visualización
+    if(menu.style.display === "flex"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+</script>
+
+</body>
+</html>
