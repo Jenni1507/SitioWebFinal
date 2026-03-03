@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diamante - Detalles</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+<style>
+
+body { 
+    margin: 0; 
+    font-family: "Inter", sans-serif;
+    background-color: #5a2d2d; 
+    color: white; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* BOTÓN HAMBURGUESA LATERAL */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    z-index: 1000;
+}
+
+/* MENÚ LATERAL DESLIZANTE */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #3b1c1c;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.side-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.side-menu a:hover {
+    background: #6e3b3b;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+/* Encabezado */
+header { 
+    background: white; 
+    color: #5a2d2d; 
+    width: 100%; 
+    padding: 20px 0; 
+    font-size: 36px; 
+    letter-spacing: 8px; 
+    font-weight: 400;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-family: "Amiri Quran", serif;
+}
+
+.slogan { 
+    font-size: 16px; 
+    margin: 25px 0; 
+    font-style: italic; 
+    color: #d8c2c2;
+}
+
+.main-img-container {
+    width: 85%;
+    max-width: 500px;
+    border: 2px solid #b3a28d;
+    padding: 10px;
+    background-color: rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+.main-img { 
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.description { 
+    width: 85%; 
+    max-width: 600px; 
+    font-size: 15px; 
+    line-height: 1.6; 
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.info-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 85%;
+    max-width: 600px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.info-card img {
+    width: 120px;
+    border-radius: 4px;
+}
+
+.info-text h3 { 
+    margin-top: 0; 
+    color: #d8c2c2; 
+}
+
+.back-btn {
+    background: #d8c2c2;
+    color: #5a2d2d;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.back-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<button class="hamburger" onclick="toggleMenu()">☰</button>
+
+<div class="side-menu" id="menu">
+    <a href="index.html">INICIO</a>
+    <a href="Diamante.html">DIAMANTE</a>
+    <a href="Zafiro.html">ZAFIRO</a>
+    <a href="Opalo.html">OPALO</a>
+</div>
+
+<header>DIAMANTE</header>
+
+<p class="slogan">"La eternidad en su forma más pura"</p>
+
+<div class="main-img-container">
+    <img src="Imagenes/Diamante foto.png" class="main-img">
+</div>
+
+<div class="description">
+El diamante es una piedra preciosa formada por carbono sometido a altísimas presiones y temperaturas en el interior de la Tierra. Es el material natural más duro que existe y se caracteriza por su gran brillo y transparencia.
+</div>
+
+<div class="info-card">
+    <div class="info-text">
+        <h3>DESCRIPCIÓN</h3>
+        <p>El diamante es una piedra preciosa muy valorada por su brillo y resistencia, por eso es común en los anillos. En especial, se usa en anillos de compromiso porque simboliza amor eterno y fortaleza.</p>
+    </div>
+    <img src="Imagenes/Diamante foto-1.png">
+</div>
+
+<div class="info-card">
+    <div class="info-text">
+        <h3>DATOS CURIOSOS</h3>
+        <p>• Su nombre proviene del griego "adamas".</p>
+        <p>• Es el material natural más duro.</p>
+        <p>• El anillo con diamante simboliza amor eterno.</p>
+        <p>• Se forman a gran profundidad bajo mucha presión.</p>
+        <p>• No todos son transparentes; hay de colores.</p>
+    </div>
+</div>
+
+<a href="index.html" class="back-btn">Volver al Inicio</a>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
